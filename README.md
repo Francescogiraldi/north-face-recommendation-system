@@ -82,60 +82,74 @@ A comprehensive Streamlit application that integrates machine learning models fo
 - **Professional Styling**: Custom CSS for modern appearance
 - **Error Handling**: Graceful error messages and fallbacks
 
-## 📋 Prerequisites
+## 🚀 Getting Started
 
+### Prerequisites
 - Python 3.8 or higher
-- The North Face catalog data (`northface_catalog.csv`)
+- pip package manager
 
-## 🔧 Installation
+### Installation
 
-1. **Clone or download the project files**:
+1. **Clone the repository**
    ```bash
-   # Ensure you have these files:
-   # - app.py
-   # - requirements.txt
-   # - northface_catalog.csv
+   git clone <repository-url>
+   cd north-face-recommendation-system
    ```
 
-2. **Install dependencies**:
+2. **Install dependencies**
    ```bash
    pip install -r requirements.txt
    ```
 
-3. **Download NLTK data** (if needed):
-   ```python
-   import nltk
-   nltk.download('punkt')
-   nltk.download('wordnet')
-   nltk.download('stopwords')
-   ```
+### 🏠 Local Development
 
-## 🚀 Running the Application
-
-1. **Navigate to the project directory**:
+3. **Train the ML models** (for faster performance)
    ```bash
-   cd PROJET_NORTH_FACE
+   python train_models.py
    ```
+   This will create a `models` directory with all trained models saved as `.joblib` files.
 
-2. **Run the Streamlit app**:
+4. **Run the Streamlit application**
    ```bash
    streamlit run app.py
    ```
 
-3. **Open your browser** and go to:
-   ```
-   http://localhost:8501
-   ```
+5. **Open your browser** and navigate to `http://localhost:8501`
+
+### ☁️ Cloud Deployment (Streamlit Community Cloud)
+
+For deployment on Streamlit Community Cloud, use the cloud-optimized version:
+
+```bash
+streamlit run app_cloud.py
+```
+
+**Key Differences:**
+- `app.py`: Uses pre-trained models (faster, requires `train_models.py` to be run first)
+- `app_cloud.py`: Trains models on-the-fly (slower initial load, but works without pre-trained models)
+
+**Deployment URL:** The app is deployed at: https://your-app-url.streamlit.app
+
+### 📋 Additional Setup
+
+**Download NLTK data** (if needed):
+```python
+import nltk
+nltk.download('punkt')
+nltk.download('wordnet')
+nltk.download('stopwords')
+```
 
 ## 📖 Usage Guide
 
 ### Running the Application
 ```bash
-# First time setup - train the models
-python train_models.py
-
-# Then run the Streamlit app
+# For local development (faster)
+python train_models.py  # Train models first
 streamlit run app.py
+
+# For cloud deployment (no pre-training needed)
+streamlit run app_cloud.py
 ```
 
 ### 📱 **Application Sections Explained**
