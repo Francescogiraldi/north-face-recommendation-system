@@ -1,0 +1,70 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+PIPFILE.lock
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.env/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Models (large files - can be regenerated)
+models/
+*.joblib
+*.pkl
+*.model
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Streamlit
+.streamlit/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Vercel
+.vercel/
+
+# Data files (if sensitive)
+# northface_catalog.csv  # Uncomment if you don't want to share the data
